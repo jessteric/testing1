@@ -28,6 +28,7 @@ class PriceService
         $dto->couponCode = $requestData['couponCode'] ?? null;
 
         $errors = $this->validator->validate($dto);
+
         if (count($errors) > 0) {
             throw new \InvalidArgumentException('Validation failed');
         }
