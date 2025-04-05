@@ -13,7 +13,7 @@ class PurchaseDto
     #[Assert\NotBlank]
     #[Assert\Regex(
         pattern: '/^(DE|IT|GR|FR)[A-Z0-9]+$/',
-        message: 'Invalid tax number'
+        message: 'Invalid tax format'
     )]
     public string $taxNumber;
 
