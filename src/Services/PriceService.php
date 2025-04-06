@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\DTO\CalculatePriceDTO;
+use App\Dto\CalculatePriceDto;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 class PriceService
@@ -22,7 +22,7 @@ class PriceService
      */
     public function calculatePrice(array $requestData): array
     {
-        $dto = new CalculatePriceDTO();
+        $dto = new CalculatePriceDto();
         $dto->product = $requestData['product'] ?? null;
         $dto->taxNumber = $requestData['taxNumber'] ?? null;
         $dto->couponCode = $requestData['couponCode'] ?? null;
